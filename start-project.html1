@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ابدأ مشروعك - كيان</title>
+    <meta name="description" content="ابدأ مشروعك مع كيان - اختر خدمتك واطلب مشروعك الآن">
+    
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- الأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- الأنيميشن -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- الأنماط -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/pages.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <h1>كيان</h1>
+                </a>
+                
+                <nav class="nav-links">
+                    <a href="index.html" class="nav-link">الرئيسية</a>
+                    <a href="services.html" class="nav-link">الخدمات</a>
+                    <a href="portfolio.html" class="nav-link">الأعمال</a>
+                    <a href="about.html" class="nav-link">من نحن</a>
+                    <a href="contact.html" class="nav-link">تواصل</a>
+                </nav>
+                
+                <div class="nav-actions">
+                    <button class="lang-switcher">EN</button>
+                    <a href="start-project.html" class="btn btn-primary">ابدأ مشروعك</a>
+                    <button class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- صفحة ابدأ مشروعك -->
+    <section class="page-hero start-project-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-title" data-aos="fade-up">ابدأ مشروعك</h1>
+                <p class="page-description" data-aos="fade-up" data-aos-delay="200">اختر خدمتك واطلب مشروعك الآن</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم اختيار الخدمة -->
+    <section class="service-selection" id="service-selection">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">اختر نوع مشروعك</h2>
+                <p class="section-subtitle">اختر الخدمة التي تريدها وسنقوم بالتواصل معك</p>
+            </div>
+            
+            <div class="services-cards">
+                <div class="service-card-select" data-aos="fade-up" data-service="branding">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>تصميم الهوية البصرية</h3>
+                    <p>تصميم شعار وهوية بصرية متكاملة لعلامتك التجارية</p>
+                    <div class="service-features-mini">
+                        <span>شعار احترافي</span>
+                        <span>هوية بصرية</span>
+                        <span>دليل الاستخدام</span>
+                    </div>
+                    <div class="service-price">تبدأ من 1,500 ريال</div>
+                    <button class="btn btn-outline select-service">اختر هذه الخدمة</button>
+                </div>
+                
+                <div class="service-card-select" data-aos="fade-up" data-aos-delay="100" data-service="web">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>تصميم وبرمجة المواقع</h3>
+                    <p>تطوير مواقع ويب متجاوبة وسريعة ومحسنة لمحركات البحث</p>
+                    <div class="service-features-mini">
+                        <span>موقع متجاوب</span>
+                        <span>تحسين SEO</span>
+                        <span>إدارة محتوى</span>
+                    </div>
+                    <div class="service-price">تبدأ من 3,000 ريال</div>
+                    <button class="btn btn-outline select-service">اختر هذه الخدمة</button>
+                </div>
+                
+                <div class="service-card-select" data-aos="fade-up" data-aos-delay="200" data-service="mobile">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>تطبيقات الجوال</h3>
+                    <p>تطوير تطبيقات جوال مبتكرة وسهلة الاستخدام</p>
+                    <div class="service-features-mini">
+                        <span>iOS و Android</span>
+                        <span>واجهة مستخدم</span>
+                        <span>أداء عالي</span>
+                    </div>
+                    <div class="service-price">تبدأ من 5,000 ريال</div>
+                    <button class="btn btn-outline select-service">اختر هذه الخدمة</button>
+                </div>
+
+                <div class="service-card-select" data-aos="fade-up" data-aos-delay="300" data-service="video">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>الفيديو والإعلانات</h3>
+                    <p>إنتاج مقاطع فيديو إعلانية إبداعية تجذب الجمهور</p>
+                    <div class="service-features-mini">
+                        <span>فيديو إعلاني</span>
+                        <span>مونتاج احترافي</span>
+                        <span>رسوم متحركة</span>
+                    </div>
+                    <div class="service-price">تبدأ من 2,000 ريال</div>
+                    <button class="btn btn-outline select-service">اختر هذه الخدمة</button>
+                </div>
+
+                <div class="service-card-select" data-aos="fade-up" data-aos-delay="400" data-service="social">
+                    <div class="service-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
+                    <h3>السوشيال ميديا</h3>
+                    <p>إنشاء محتوى بصري مذهل لمنصات التواصل الاجتماعي</p>
+                    <div class="service-features-mini">
+                        <span>تصاميم</span>
+                        <span>استراتيجية</span>
+                        <span>إدارة محتوى</span>
+                    </div>
+                    <div class="service-price">تبدأ من 1,200 ريال</div>
+                    <button class="btn btn-outline select-service">اختر هذه الخدمة</button>
+                </div>
+
+                <div class="service-card-select" data-aos="fade-up" data-aos-delay="500" data-service="other">
+                    <div class="service-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>خدمات أخرى</h3>
+                    <p>لديك فكرة مختلفة؟ تحدثنا عن مشروعك المميز</p>
+                    <div class="service-features-mini">
+                        <span>استشارة</span>
+                        <span>تطوير مخصص</span>
+                        <span>حلول مبتكرة</span>
+                    </div>
+                    <div class="service-price">اسعار مخصصة</div>
+                    <button class="btn btn-outline select-service">اختر هذه الخدمة</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم عرض الخدمة المختارة -->
+    <section class="selected-service-display" id="selected-service-display" style="display: none;">
+        <div class="container">
+            <div class="selected-service-content" data-aos="fade-up">
+                <div class="service-header">
+                    <h2 id="selected-service-title">خدمة تصميم الهوية البصرية</h2>
+                    <p id="selected-service-desc">تصميم شعار وهوية بصرية متكاملة لعلامتك التجارية</p>
+                </div>
+                
+                <div class="service-details">
+                    <div class="service-benefits">
+                        <h3>ماذا تحصل عليه؟</h3>
+                        <div class="benefits-list" id="benefits-list">
+                            <!-- سيتم ملؤها بالجافاسكريبت -->
+                        </div>
+                    </div>
+                    
+                    <div class="service-process">
+                        <h3>كيف نعمل؟</h3>
+                        <div class="process-steps-mini">
+                            <div class="process-step">
+                                <div class="step-icon">1</div>
+                                <p>نقابل ونتعرف على متطلباتك</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-icon">2</div>
+                                <p>نصمم الحل المناسب لمشروعك</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-icon">3</div>
+                                <p>ننفذ المشروع بدقة واحترافية</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="step-icon">4</div>
+                                <p>نسلم المشروع مع متابعة ودعم</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-cta">
+                    <h3>مستعد لبدء مشروعك؟</h3>
+                    <p>اختر الباقة المناسبة لمشروعك أو اتصل بنا مباشرة</p>
+                    
+                    <div class="cta-actions">
+                        <button class="btn btn-primary" id="request-quote">اطلب عرض سعر</button>
+                        <a href="https://wa.me/96779516077" class="btn btn-outline" target="_blank">تواصل مباشر عبر الواتساب</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم طلب عرض السعر -->
+    <section class="quote-request" id="quote-request" style="display: none;">
+        <div class="container">
+            <div class="quote-form-container" data-aos="fade-up">
+                <div class="form-header">
+                    <h2>اطلب عرض سعر</h2>
+                    <p>املأ النموذج وسنرسل لك عرض سعر مفصل خلال 24 ساعة</p>
+                </div>
+                
+                <form id="quote-request-form">
+                    <input type="hidden" id="selected-service-type" name="service_type">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="quote-name" name="name" required>
+                            <label for="quote-name">الاسم الكامل</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="quote-email" name="email" required>
+                            <label for="quote-email">البريد الإلكتروني</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="tel" id="quote-phone" name="phone" required>
+                            <label for="quote-phone">رقم الجوال</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="quote-company" name="company">
+                            <label for="quote-company">اسم الشركة (اختياري)</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="quote-budget">ميزانية المشروع المتوقعة</label>
+                        <select id="quote-budget" name="budget" required>
+                            <option value="">اختر نطاق الميزانية</option>
+                            <option value="1000-3000">1,000 - 3,000 ريال</option>
+                            <option value="3000-7000">3,000 - 7,000 ريال</option>
+                            <option value="7000-15000">7,000 - 15,000 ريال</option>
+                            <option value="15000+">أكثر من 15,000 ريال</option>
+                            <option value="not-sure">غير متأكد</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <label for="quote-deadline">الموعد النهائي المطلوب</label>
+                        <select id="quote-deadline" name="deadline" required>
+                            <option value="">اختر الموعد المناسب</option>
+                            <option value="urgent">عاجل (أقل من أسبوع)</option>
+                            <option value="1-2 weeks">1-2 أسبوع</option>
+                            <option value="2-4 weeks">2-4 أسابيع</option>
+                            <option value="1-2 months">1-2 شهر</option>
+                            <option value="flexible">مرن</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group full-width">
+                        <textarea id="quote-details" name="project_details" rows="4" required placeholder="أخبرنا المزيد عن مشروعك..."></textarea>
+                    </div>
+                    
+                    <div class="form-submit">
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span class="btn-text">إرسال طلب عرض السعر</span>
+                            <span class="btn-loader" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> جاري الإرسال...
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- نفس التذييل وزر الواتساب كما في index.html -->
+
+    <!-- مكتبات JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/animations.js"></script>
+    <script>
+        // بيانات الخدمات
+        const servicesData = {
+            branding: {
+                title: "تصميم الهوية البصرية",
+                description: "تصميم شعار وهوية بصرية متكاملة لعلامتك التجارية",
+                benefits: [
+                    "شعار احترافي يعبر عن هويتك",
+                    "دليل الهوية البصرية الشامل",
+                    "ملفات الشعار بأنواعها (PNG, SVG, PDF)",
+                    "ألوان وخطوط العلامة التجارية",
+                    "تصميم بطاقات العمل والقرطاسية",
+                    "دعم فني لمدة أسبوع"
+                ],
+                whatsappMessage: "مرحباً، أريد الاستفسار عن خدمة تصميم الهوية البصرية"
+            },
+            web: {
+                title: "تصميم وبرمجة المواقع",
+                description: "تطوير مواقع ويب متجاوبة وسريعة ومحسنة لمحركات البحث",
+                benefits: [
+                    "موقع إلكتروني متجاوب مع جميع الأجهزة",
+                    "تحسين محركات البحث (SEO)",
+                    "نظام إدارة محتوى سهل الاستخدام",
+                    "استضافة موثوقة وسريعة",
+                    "شهادة SSL للأمان",
+                    "دعم فني لمدة شهر"
+                ],
+                whatsappMessage: "مرحباً، أريد الاستفسار عن خدمة تصميم وبرمجة المواقع"
+            },
+            mobile: {
+                title: "تطبيقات الجوال",
+                description: "تطوير تطبيقات جوال مبتكرة وسهلة الاستخدام",
+                benefits: [
+                    "تطبيق يعمل على iOS و Android",
+                    "واجهة مستخدم جذابة وسهلة",
+                    "أداء عالي وسرعة في التحميل",
+                    "تكامل مع الأنظمة الأخرى",
+                    "اختبار شامل للتطبيق",
+                    "نشر التطبيق على المتاجر"
+                ],
+                whatsappMessage: "مرحباً، أريد الاستفسار عن خدمة تطبيقات الجوال"
+            },
+            video: {
+                title: "الفيديو والإعلانات",
+                description: "إنتاج مقاطع فيديو إعلانية إبداعية تجذب الجمهور",
+                benefits: [
+                    "فيديو إعلاني احترافي",
+                    "مونتاج وفيديو جرافيك",
+                    "نص إبداعي وجذاب",
+                    "تعليق صوتي احترافي",
+                    "موسيقى ومؤثرات صوتية",
+                    "نسخ متعددة للفيديو"
+                ],
+                whatsappMessage: "مرحباً، أريد الاستفسار عن خدمة الفيديو والإعلانات"
+            },
+            social: {
+                title: "السوشيال ميديا",
+                description: "إنشاء محتوى بصري مذهل لمنصات التواصل الاجتماعي",
+                benefits: [
+                    "تصاميم احترافية للمنشورات",
+                    "استراتيجية محتوى مخصصة",
+                    "إدارة الحسابات الشهرية",
+                    "تحليلات وأداء المحتوى",
+                    "تصاميم Stories و Reels",
+                    "تقارير أداء شهرية"
+                ],
+                whatsappMessage: "مرحباً، أريد الاستفسار عن خدمة السوشيال ميديا"
+            },
+            other: {
+                title: "خدمات أخرى",
+                description: "لديك فكرة مختلفة؟ تحدثنا عن مشروعك المميز",
+                benefits: [
+                    "استشارة مجانية لمشروعك",
+                    "تحليل احتياجاتك بدقة",
+                    "عرض سعر مفصل وشامل",
+                    "حلول تقنية مبتكرة",
+                    "فريق متخصص في مجالات متعددة",
+                    "دعم متكامل من البداية للنهاية"
+                ],
+                whatsappMessage: "مرحباً، لدي فكرة مشروع وأريد الاستفسار عن الخدمات"
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // اختيار الخدمة
+            const serviceCards = document.querySelectorAll('.service-card-select');
+            const serviceSelectionSection = document.getElementById('service-selection');
+            const selectedServiceSection = document.getElementById('selected-service-display');
+            const quoteRequestSection = document.getElementById('quote-request');
+            
+            const selectedServiceTitle = document.getElementById('selected-service-title');
+            const selectedServiceDesc = document.getElementById('selected-service-desc');
+            const benefitsList = document.getElementById('benefits-list');
+            const selectedServiceType = document.getElementById('selected-service-type');
+            
+            serviceCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const service = this.getAttribute('data-service');
+                    const serviceData = servicesData[service];
+                    
+                    // تحديث البيانات في قسم الخدمة المختارة
+                    selectedServiceTitle.textContent = serviceData.title;
+                    selectedServiceDesc.textContent = serviceData.description;
+                    selectedServiceType.value = service;
+                    
+                    // تحديث قائمة المزايا
+                    benefitsList.innerHTML = '';
+                    serviceData.benefits.forEach(benefit => {
+                        const benefitItem = document.createElement('div');
+                        benefitItem.className = 'benefit-item';
+                        benefitItem.innerHTML = `
+                            <i class="fas fa-check"></i>
+                            <span>${benefit}</span>
+                        `;
+                        benefitsList.appendChild(benefitItem);
+                    });
+                    
+                    // تحديث رابط الواتساب
+                    const whatsappBtn = document.querySelector('.btn-outline[target="_blank"]');
+                    const encodedMessage = encodeURIComponent(serviceData.whatsappMessage);
+                    whatsappBtn.href = `https://wa.me/96779516077?text=${encodedMessage}`;
+                    
+                    // إظهار قسم الخدمة المختارة وإخفاء قسم الاختيار
+                    serviceSelectionSection.style.display = 'none';
+                    selectedServiceSection.style.display = 'block';
+                    
+                    // التمرير إلى قسم الخدمة المختارة
+                    selectedServiceSection.scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+            
+            // طلب عرض سعر
+            const requestQuoteBtn = document.getElementById('request-quote');
+            
+            requestQuoteBtn.addEventListener('click', function() {
+                selectedServiceSection.style.display = 'none';
+                quoteRequestSection.style.display = 'block';
+                
+                // التمرير إلى قسم طلب السعر
+                quoteRequestSection.scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            // إرسال نموذج طلب السعر
+            const quoteForm = document.getElementById('quote-request-form');
+            
+            if (quoteForm) {
+                quoteForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const submitBtn = this.querySelector('button[type="submit"]');
+                    const btnText = submitBtn.querySelector('.btn-text');
+                    const btnLoader = submitBtn.querySelector('.btn-loader');
+                    
+                    // عرض حالة التحميل
+                    btnText.style.display = 'none';
+                    btnLoader.style.display = 'block';
+                    submitBtn.disabled = true;
+                    
+                    // جمع بيانات النموذج
+                    const formData = new FormData(this);
+                    const data = Object.fromEntries(formData);
+                    
+                    // إنشاء رسالة الواتساب
+                    const whatsappMessage = `طلب عرض سعر جديد%0A%0Aالخدمة: ${servicesData[data.service_type].title}%0Aالاسم: ${data.name}%0Aالبريد: ${data.email}%0Aالهاتف: ${data.phone}%0Aالشركة: ${data.company || 'غير محدد'}%0Aالميزانية: ${data.budget}%0Aالموعد: ${data.deadline}%0Aتفاصيل المشروع: ${data.project_details}`;
+                    
+                    // رقم الواتساب (استبدله برقمك)
+                    const whatsappNumber = ' 779516077 967+7';
+                    
+                    // فتح الواتساب بعد تأخير بسيط
+                    setTimeout(() => {
+                        window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
+                        
+                        // إعادة تعيين النموذج
+                        this.reset();
+                        
+                        // إعادة زر الإرسال إلى حالته الأصلية
+                        btnText.style.display = 'block';
+                        btnLoader.style.display = 'none';
+                        submitBtn.disabled = false;
+                        
+                        // إظهار رسالة نجاح
+                        alert('تم إرسال طلبك بنجاح! سيتم فتح تطبيق الواتساب لإكمال الطلب.');
+                    }, 1500);
+                });
+            }
+            
+            // معالجة معلمات URL لاختيار خدمة محددة مسبقاً
+            const urlParams = new URLSearchParams(window.location.search);
+            const serviceParam = urlParams.get('service');
+            const planParam = urlParams.get('plan');
+            
+            if (serviceParam && servicesData[serviceParam]) {
+                const targetCard = document.querySelector(`.service-card-select[data-service="${serviceParam}"]`);
+                if (targetCard) {
+                    targetCard.click();
+                    
+                    // إذا كان هناك خطة محددة، انتقل مباشرة إلى طلب السعر
+                    if (planParam) {
+                        setTimeout(() => {
+                            requestQuoteBtn.click();
+                        }, 500);
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

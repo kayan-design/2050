@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأعمال - كيان</title>
+    <meta name="description" content="شاهد مجموعة أعمال كيان في التصميم - شعارات، دعايات، سوشيال ميديا، تعديل الصور">
+    
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- الأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- الأنيميشن -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- الأنماط -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+    <style>
+        /* أنماط إضافية للصفحة */
+        .portfolio-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .portfolio-filter {
+            padding: 40px 0;
+            background: #f8fafc;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 10px 20px;
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 30px;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 1rem;
+            color: #64748b;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .filter-btn:hover, .filter-btn.active {
+            background: #1e3a8a;
+            border-color: #1e3a8a;
+            color: white;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 80px 0;
+        }
+        
+        .portfolio-item {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .portfolio-image {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-image img {
+            transform: scale(1.1);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(30, 58, 138, 0.9);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .portfolio-category {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .portfolio-info {
+            padding: 20px;
+        }
+        
+        .portfolio-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #1e293b;
+        }
+        
+        .portfolio-info p {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .portfolio-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .tag {
+            background: #f1f5f9;
+            color: #475569;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .portfolio-cta {
+            background: #f8fafc;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1e293b;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                padding: 50px 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .filter-buttons {
+                gap: 10px;
+            }
+            
+            .filter-btn {
+                padding: 8px 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <h1>كيان</h1>
+                </a>
+                
+                <nav class="nav-links">
+                    <a href="index.html" class="nav-link">الرئيسية</a>
+                    <a href="services.html" class="nav-link">الخدمات</a>
+                    <a href="portfolio.html" class="nav-link active">الأعمال</a>
+                    <a href="about.html" class="nav-link">من نحن</a>
+                    <a href="contact.html" class="nav-link">تواصل</a>
+                </nav>
+                
+                <div class="nav-actions">
+                    <button class="lang-switcher">EN</button>
+                    <a href="contact.html" class="btn btn-primary">اطلب خدمتك</a>
+                    <button class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- قسم الأعمال -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <h1 data-aos="fade-up">معرض أعمالنا</h1>
+            <p data-aos="fade-up" data-aos-delay="200">شاهد إبداعاتنا في التصميم التي نفخر بها</p>
+        </div>
+    </section>
+
+    <section class="portfolio-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="logo">شعارات</button>
+                <button class="filter-btn" data-filter="wedding">أعراس</button>
+                <button class="filter-btn" data-filter="restaurant">مطاعم</button>
+                <button class="filter-btn" data-filter="social">سوشيال ميديا</button>
+                <button class="filter-btn" data-filter="certificate">شهادات</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="portfolio-grid">
+            <!-- عمل 1: تصميم شعار -->
+            <div class="portfolio-item" data-category="logo" data-aos="fade-up">
+                <div class="portfolio-image">
+                    <img src="assets/images/portfolio-logo-1.jpg" alt="تصميم شعار لمطعم">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">شعار مطعم</h3>
+                        <p class="portfolio-category">تصميم شعارات</p>
+                        <a href="contact.html" class="btn btn-outline">اطلب تصميم مشابه</a>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>شعار لمطعم تراثي</h3>
+                    <p>تصميم شعار يجمع بين الأصالة والحداثة لمطعم يقدم المأكولات الشعبية.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">شعار</span>
+                        <span class="tag">مطعم</span>
+                        <span class="tag">تراثي</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- عمل 2: تصميم دعوة عرس -->
+            <div class="portfolio-item" data-category="wedding" data-aos="fade-up" data-aos-delay="100">
+                <div class="portfolio-image">
+                    <img src="assets/images/portfolio-wedding-1.jpg" alt="تصميم دعوة عرس">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">دعوة عرس</h3>
+                        <p class="portfolio-category">تصميم أعراس</p>
+                        <a href="contact.html" class="btn btn-outline">اطلب تصميم مشابه</a>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>دعوة زفاف فاخرة</h3>
+                    <p>تصميم دعوة زفاف بتفاصيل ذهبية وأناقة تعكس أهمية المناسبة.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">عرس</span>
+                        <span class="tag">دعوة</span>
+                        <span class="tag">فاخر</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- عمل 3: تصميم قائمة مطعم -->
+            <div class="portfolio-item" data-category="restaurant" data-aos="fade-up" data-aos-delay="200">
+                <div class="portfolio-image">
+                    <img src="assets/images/portfolio-restaurant-1.jpg" alt="تصميم قائمة مطعم">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">قائمة طعام</h3>
+                        <p class="portfolio-category">تصميم مطاعم</p>
+                        <a href="contact.html" class="btn btn-outline">اطلب تصميم مشابه</a>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>قائمة طعام لمطعم وجبات سريعة</h3>
+                    <p>تصميم قائمة طعام جذابة وعملية تسهل على الزبائن اختيار الوجبات.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">مطعم</span>
+                        <span class="tag">قائمة</span>
+                        <span class="tag">تصميم عملي</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- عمل 4: تصميم منشور سوشيال ميديا -->
+            <div class="portfolio-item" data-category="social" data-aos="fade-up" data-aos-delay="300">
+                <div class="portfolio-image">
+                    <img src="assets/images/portfolio-social-1.jpg" alt="تصميم منشور سوشيال ميديا">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">منشور ترويجي</h3>
+                        <p class="portfolio-category">سوشيال ميديا</p>
+                        <a href="contact.html" class="btn btn-outline">اطلب تصميم مشابه</a>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>منشور ترويجي لمنتج جديد</h3>
+                    <p>تصميم منشور إعلاني جذاب يبرز مزايا المنتج ويشجع على الشراء.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">سوشيال ميديا</span>
+                        <span class="tag">إعلان</span>
+                        <span class="tag">ترويج</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- عمل 5: تصميم شهادة -->
+            <div class="portfolio-item" data-category="certificate" data-aos="fade-up" data-aos-delay="400">
+                <div class="portfolio-image">
+                    <img src="assets/images/portfolio-certificate-1.jpg" alt="تصميم شهادة">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">شهادة تقدير</h3>
+                        <p class="portfolio-category">تصميم شهادات</p>
+                        <a href="contact.html" class="btn btn-outline">اطلب تصميم مشابه</a>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>شهادة تقدير للموظف المتميز</h3>
+                    <p>تصميم شهادة تقدير احترافية تعكس قيمة الإنجاز وتحفز على التميز.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">شهادة</span>
+                        <span class="tag">تقدير</span>
+                        <span class="tag">احترافية</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- عمل 6: تصميم شعار آخر -->
+            <div class="portfolio-item" data-category="logo" data-aos="fade-up" data-aos-delay="500">
+                <div class="portfolio-image">
+                    <img src="assets/images/portfolio-logo-2.jpg" alt="تصميم شعار لشركة">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">شعار شركة</h3>
+                        <p class="portfolio-category">تصميم شعارات</p>
+                        <a href="contact.html" class="btn btn-outline">اطلب تصميم مشابه</a>
+                    </div>
+                </div>
+                <div class="portfolio-info">
+                    <h3>شعار لشركة تقنية</h3>
+                    <p>تصميم شعار يعبر عن الابتكار والتطور في مجال التقنية.</p>
+                    <div class="portfolio-tags">
+                        <span class="tag">شعار</span>
+                        <span class="tag">شركة</span>
+                        <span class="tag">تقنية</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الدعوة للتواصل -->
+    <section class="portfolio-cta">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">أعجبك أعمالنا؟</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">يمكننا تصميم شيء مشابه أو أفضل لك</p>
+            <a href="contact.html" class="btn btn-primary" data-aos="fade-up" data-aos-delay="400">اطلب تصميمك الآن</a>
+        </div>
+    </section>
+
+    <!-- نفس التذييل وزر الواتساب -->
+
+    <!-- مكتبات JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // تهيئة AOS للأنيميشن عند التمرير
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                offset: 100
+            });
+            
+            // إدارة القائمة المتنقلة
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    this.classList.toggle('active');
+                });
+            }
+            
+            // تصفية الأعمال
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // إزالة النشاط من جميع الأزرار
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // إضافة النشاط للزر المحدد
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                            setTimeout(() => {
+                                item.style.opacity = '1';
+                            }, 100);
+                        } else {
+                            item.style.opacity = '0';
+                            setTimeout(() => {
+                                item.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

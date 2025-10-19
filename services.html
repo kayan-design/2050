@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الخدمات - كيان</title>
+    <meta name="description" content="خدمات كيان في التصميم - شعارات، دعايات، سوشيال ميديا، تعديل الصور، تصميم مواقع وتطبيقات بسيطة">
+    
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- الأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- الأنيميشن -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- الأنماط -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+    <style>
+        /* أنماط إضافية للصفحة */
+        .services-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 80px 0;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 1px solid #f1f5f9;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: #1e3a8a;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+        }
+        
+        .service-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #1e293b;
+        }
+        
+        .service-card p {
+            color: #64748b;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .service-features {
+            margin: 20px 0;
+        }
+        
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+            color: #475569;
+        }
+        
+        .feature-item i {
+            color: #1e3a8a;
+            font-size: 0.9rem;
+        }
+        
+        .btn-service {
+            display: inline-block;
+            background: #1e3a8a;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid #1e3a8a;
+        }
+        
+        .btn-service:hover {
+            background: transparent;
+            color: #1e3a8a;
+        }
+        
+        .services-cta {
+            background: #f8fafc;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1e293b;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: #64748b;
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        
+        @media (max-width: 768px) {
+            .services-grid {
+                grid-template-columns: 1fr;
+                padding: 50px 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <h1>كيان</h1>
+                </a>
+                
+                <nav class="nav-links">
+                    <a href="index.html" class="nav-link">الرئيسية</a>
+                    <a href="services.html" class="nav-link active">الخدمات</a>
+                    <a href="portfolio.html" class="nav-link">الأعمال</a>
+                    <a href="about.html" class="nav-link">من نحن</a>
+                    <a href="contact.html" class="nav-link">تواصل</a>
+                </nav>
+                
+                <div class="nav-actions">
+                    <button class="lang-switcher">EN</button>
+                    <a href="contact.html" class="btn btn-primary">اطلب خدمتك</a>
+                    <button class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- قسم الخدمات -->
+    <section class="services-hero">
+        <div class="container">
+            <h1 data-aos="fade-up">خدماتنا الإبداعية</h1>
+            <p data-aos="fade-up" data-aos-delay="200">نقدم حلول تصميم متكاملة تلبي جميع احتياجاتك</p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="services-grid">
+            <!-- خدمة تصميم الشعارات -->
+            <div class="service-card" data-aos="fade-up">
+                <div class="service-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>تصميم الشعارات</h3>
+                <p>نصمم شعارات إبداعية تعبر عن هوية علامتك التجارية وتجذب انتباه عملائك</p>
+                
+                <div class="service-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>شعار احترافي وفريد</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>ملفات متعددة الاستخدامات</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>تعديلات حتى الإرضاء</span>
+                    </div>
+                </div>
+                
+                <a href="contact.html?service=logo" class="btn-service">اطلب التصميم</a>
+            </div>
+
+            <!-- خدمة تصميم لوحات الأعراس -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>تصميم لوحات الأعراس</h3>
+                <p>تصاميم فريدة لدعوات الأفراح والمناسبات السعيدة تناسب ذوقك الخاص</p>
+                
+                <div class="service-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>تصميم دعوات مخصص</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>لوحات ترحيب وتوجيه</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>بطاقات شكر وتقدير</span>
+                    </div>
+                </div>
+                
+                <a href="contact.html?service=wedding" class="btn-service">اطلب التصميم</a>
+            </div>
+
+            <!-- خدمة تصميم إعلانات المطاعم -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>تصميم إعلانات المطاعم</h3>
+                <p>إعلانات جذابة وقوائم طعام مبتكرة تجذب الزبائن وتعزز مبيعاتك</p>
+                
+                <div class="service-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>تصميم قوائم طعام</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>إعلانات وعروض ترويجية</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>تصاميم للشبكات الاجتماعية</span>
+                    </div>
+                </div>
+                
+                <a href="contact.html?service=restaurant" class="btn-service">اطلب التصميم</a>
+            </div>
+
+            <!-- خدمة تصميم الشهادات -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3>تصميم الشهادات</h3>
+                <p>شهادات تقدير وجوائز بتصاميم احترافية تعكس قيمة الإنجاز</p>
+                
+                <div class="service-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>شهادات تقدير واحترام</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>شهادات مشاركة وإنجاز</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>تصاميم قابلة للتخصيص</span>
+                    </div>
+                </div>
+                
+                <a href="contact.html?service=certificates" class="btn-service">اطلب التصميم</a>
+            </div>
+
+            <!-- خدمة السوشيال ميديا -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-icon">
+                    <i class="fas fa-hashtag"></i>
+                </div>
+                <h3>تصميم السوشيال ميديا</h3>
+                <p>إنشاء محتوى بصري مذهل لمنصات التواصل الاجتماعي يعزز وجودك الرقمي</p>
+                
+                <div class="service-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>تصاميم منشورات واحتياجات</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>بانرات ورسوم بيانية</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>تصاميم متوافقة مع جميع المنصات</span>
+                    </div>
+                </div>
+                
+                <a href="contact.html?service=social" class="btn-service">اطلب التصميم</a>
+            </div>
+
+            <!-- خدمة تعديل الصور -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-icon">
+                    <i class="fas fa-camera-retro"></i>
+                </div>
+                <h3>تعديل وإنشاء الصور</h3>
+                <p>تعديل الصور وإنشاء تصاميم بصرية احترافية تلبي احتياجاتك</p>
+                
+                <div class="service-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>تعديل الألوان والإضاءة</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>إزالة الخلفيات والعيوب</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>إنشاء صور مصغرة وجذابة</span>
+                    </div>
+                </div>
+                
+                <a href="contact.html?service=photo" class="btn-service">اطلب التصميم</a>
+            </div>
+
+            <!-- خدمة إنشاء الجداول -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="service-icon">
+                    <i class="fas fa-table"></i>
+                </div>
+                <h3>إنشاء الجداول والاختبارات</h3>
+                <p>تصميم جداول واختبارات بطريقة احترافية ومنظمة</p>
+                
+                <div class="service-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>جداول بيانات منظمة</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>تصميم اختبارات وأنشطة</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>نماذج وتقارير احترافية</span>
+                    </div>
+                </div>
+                
+                <a href="contact.html?service=tables" class="btn-service">اطلب التصميم</a>
+            </div>
+
+            <!-- خدمة تصميم المواقع -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+                <div class="service-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>تصميم مواقع إلكترونية</h3>
+                <p>إنشاء مواقع ويب بسيطة وسهلة الاستخدام تعبر عن نشاطك التجاري</p>
+                
+                <div class="service-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>تصميم متجاوب مع جميع الأجهزة</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>واجهة مستخدم سهلة وبسيطة</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>تحسين لمحركات البحث</span>
+                    </div>
+                </div>
+                
+                <a href="contact.html?service=website" class="btn-service">اطلب التصميم</a>
+            </div>
+
+            <!-- خدمة تصميم التطبيقات -->
+            <div class="service-card" data-aos="fade-up" data-aos-delay="800">
+                <div class="service-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>تصميم تطبيقات بسيطة</h3>
+                <p>تطوير تطبيقات إلكترونية بسيطة تلبي احتياجاتك الأساسية</p>
+                
+                <div class="service-features">
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>واجهة مستخدم جذابة</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>أداء سريع ومستقر</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-check"></i>
+                        <span>سهولة الاستخدام</span>
+                    </div>
+                </div>
+                
+                <a href="contact.html?service=app" class="btn-service">اطلب التصميم</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الدعوة للتواصل -->
+    <section class="services-cta">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">مستعد لبدء مشروعك؟</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">اختر الخدمة التي تريدها وسنقوم بالتواصل معك خلال 24 ساعة</p>
+            <a href="contact.html" class="btn btn-primary" data-aos="fade-up" data-aos-delay="400">اتصل بنا الآن</a>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h2>كيان</h2>
+                    </div>
+                    <p class="footer-description">نحو كيان إبداعي يصمم لك المستقبل الرقمي. نقدم حلولاً متكاملة في التصميم والبرمجة.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="services.html">الخدمات</a></li>
+                        <li><a href="portfolio.html">الأعمال</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="contact.html">تواصل</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">خدماتنا</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html">تصميم الشعارات</a></li>
+                        <li><a href="services.html">تصميم الدعايات</a></li>
+                        <li><a href="services.html">السوشيال ميديا</a></li>
+                        <li><a href="services.html">تعديل الصور</a></li>
+                        <li><a href="services.html">تصميم المواقع</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">تواصل معنا</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i>  779516077 967+</p>
+                        <p><i class="fas fa-envelope"></i> info@kayan.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>© 2025 كيان. جميع الحقوق محفوظة.</p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- زر واتساب ثابت -->
+    <a href="https://wa.me/96779516077" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- مكتبات JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // تهيئة AOS للأنيميشن عند التمرير
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                offset: 100
+            });
+            
+            // إدارة القائمة المتنقلة
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    this.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

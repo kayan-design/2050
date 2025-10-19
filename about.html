@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن - كيان</title>
+    <meta name="description" content="تعرف على فريق كيان - رؤيتنا، رسالتنا، وقيمنا في تقديم حلول التصميم المتميزة">
+    
+    <!-- الخطوط -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- الأيقونات -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- الأنيميشن -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- الأنماط -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    
+    <style>
+        .page-hero {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            color: var(--white);
+            text-align: center;
+            position: relative;
+        }
+        
+        .page-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .page-description {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .about-content {
+            padding: 80px 0;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            color: var(--text-dark);
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+        
+        .about-image {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .features-section {
+            padding: 80px 0;
+            background: var(--gray-light);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 1.8rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+        
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+        
+        .team-section {
+            padding: 80px 0;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+        
+        .team-member {
+            text-align: center;
+            padding: 30px;
+            background: var(--white);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .member-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 20px;
+            border: 5px solid var(--gray-light);
+        }
+        
+        .member-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+        
+        .member-info p {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+        
+        .member-info span {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .stats-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+            color: var(--white);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .cta-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+        
+        .cta-content p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-title {
+                font-size: 2.5rem;
+            }
+            
+            .about-text h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .features-grid, .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <header class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    <h1>كيان</h1>
+                </a>
+                
+                <nav class="nav-links">
+                    <a href="index.html" class="nav-link">الرئيسية</a>
+                    <a href="services.html" class="nav-link">الخدمات</a>
+                    <a href="portfolio.html" class="nav-link">الأعمال</a>
+                    <a href="about.html" class="nav-link active">من نحن</a>
+                    <a href="contact.html" class="nav-link">تواصل</a>
+                </nav>
+                
+                <div class="nav-actions">
+                    <button class="lang-switcher">EN</button>
+                    <a href="contact.html" class="btn btn-primary">اطلب خدمتك</a>
+                    <button class="mobile-menu-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- قسم من نحن الرئيسي -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-title" data-aos="fade-up">من نحن</h1>
+            <p class="page-description" data-aos="fade-up" data-aos-delay="200">نحو كيان إبداعي يصمم لك المستقبل الرقمي</p>
+        </div>
+    </section>
+
+    <!-- قسم التعريف -->
+    <section class="about-content">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text" data-aos="fade-right">
+                    <h2>كيان وُجد ليجمع بين التصميم والإبداع</h2>
+                    <p>نحن فريق من المصممين المبدعين المتخصصين في تقديم حلول تصميمية متكاملة تجمع بين الجمال البصري والوظائف العملية. نعمل معاً لتحويل أفكارك إلى واقع ملموس يلبي توقعاتك ويتجاوزها.</p>
+                    <p>تأسست "كيان" بهدف تقديم خدمات تصميم عالية الجودة بأسعار معقولة، ومنذ بدايتنا نمونا لتصبح واحدة من الشركات الرائدة في مجال الحلول التصميمية المبتكرة.</p>
+                    <p>نؤمن بأن التصميم الجيد ليس مجرد شكل جميل، بل هو حل لمشكلة وطريقة لتحسين تجربة المستخدم وزيادة فعالية التواصل.</p>
+                </div>
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="about-image">
+                        <img src="assets/images/about-team.jpg" alt="فريق كيان">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم المميزات -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">لماذا تختار كيان؟</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">نحن نقدم قيمة مضافة لا مثيل لها لعملائنا</p>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>تصميم مبدع</h3>
+                    <p>نبتكر حلولاً تصميمية فريدة تلهم الجمهور وتخلق تجارب بصرية استثنائية تعبر عن هوية علامتك التجارية.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>تسليم سريع</h3>
+                    <p>نحرص على تسليم مشاريعنا في الوقت المحدد دون المساس بجودة العمل أو التفاصيل الدقيقة.</p>
+                </div>
+                
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3>جودة عالية</h3>
+                    <p>نلتزم بأعلى معايير الجودة في كل مشروع، بدءاً من التخطيط وصولاً إلى التنفيذ النهائي.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الإحصائيات -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="fade-up">
+                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-label">مشروع مكتمل</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number" data-count="95">0</div>
+                    <div class="stat-label">عميل سعيد</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number" data-count="3">0</div>
+                    <div class="stat-label">سنوات من الخبرة</div>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number" data-count="500">0</div>
+                    <div class="stat-label">تصميم مكتمل</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الفريق -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">فريقنا</h2>
+            <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">المبدعون وراء نجاح كيان</p>
+            
+            <div class="team-grid">
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member-photo">
+                        <img src="assets/images/team-1.jpg" alt="أحمد الشمري">
+                    </div>
+                    <div class="member-info">
+                        <h3>أحمد الشمري</h3>
+                        <p>مصمم جرافيك رئيسي</p>
+                        <span>خبرة 5 سنوات في التصميم الجرافيكي والهوية البصرية</span>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-photo">
+                        <img src="assets/images/team-2.jpg" alt="سارة العلي">
+                    </div>
+                    <div class="member-info">
+                        <h3>سارة العلي</h3>
+                        <p>مصممة وسائط متعددة</p>
+                        <span>متخصصة في تصميم السوشيال ميديا والمواد الترويجية</span>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member-photo">
+                        <img src="assets/images/team-3.jpg" alt="محمد الحربي">
+                    </div>
+                    <div class="member-info">
+                        <h3>محمد الحربي</h3>
+                        <p>مطور ويب</p>
+                        <span>خبرة في تطوير مواقع الويب البسيطة والتطبيقات</span>
+                    </div>
+                </div>
+                
+                <div class="team-member" data-aos="fade-up" data-aos-delay="400">
+                    <div class="member-photo">
+                        <img src="assets/images/team-4.jpg" alt="فاطمة القحطاني">
+                    </div>
+                    <div class="member-info">
+                        <h3>فاطمة القحطاني</h3>
+                        <p>مصممة UX/UI</p>
+                        <span>متخصصة في تصميم تجارب المستخدم والواجهات التفاعلية</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الدعوة للتواصل -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 data-aos="fade-up">مستعد لبدء مشروعك معنا؟</h2>
+                <p data-aos="fade-up" data-aos-delay="200">لنعمل معاً على تحويل فكرتك إلى واقع ملموس يلهم جمهورك ويحقق أهدافك</p>
+                <a href="contact.html" class="btn btn-primary" data-aos="fade-up" data-aos-delay="400">لنبدأ مشروعك</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <h2>كيان</h2>
+                    </div>
+                    <p class="footer-description">نحو كيان إبداعي يصمم لك المستقبل الرقمي. نقدم حلولاً متكاملة في التصميم والبرمجة.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">روابط سريعة</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="services.html">الخدمات</a></li>
+                        <li><a href="portfolio.html">الأعمال</a></li>
+                        <li><a href="about.html">من نحن</a></li>
+                        <li><a href="contact.html">تواصل</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">خدماتنا</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html">تصميم الشعارات</a></li>
+                        <li><a href="services.html">تصميم الدعايات</a></li>
+                        <li><a href="services.html">السوشيال ميديا</a></li>
+                        <li><a href="services.html">تعديل الصور</a></li>
+                        <li><a href="services.html">تصميم المواقع</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">تواصل معنا</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i>  779516077 967+</p>
+                        <p><i class="fas fa-envelope"></i> info@kayan.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>© 2025 كيان. جميع الحقوق محفوظة.</p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- زر واتساب ثابت -->
+    <a href="https://wa.me/96779516077" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- مكتبات JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // تهيئة AOS للأنيميشن عند التمرير
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                offset: 100
+            });
+            
+            // إدارة القائمة المتنقلة
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                    this.classList.toggle('active');
+                });
+            }
+            
+            // عدادات الإحصائيات
+            const statNumbers = document.querySelectorAll('.stat-number');
+            const statsSection = document.querySelector('.stats-section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        statNumbers.forEach(stat => {
+                            const target = parseInt(stat.getAttribute('data-count'));
+                            const duration = 2000;
+                            const step = target / (duration / 16);
+                            let current = 0;
+                            
+                            const timer = setInterval(() => {
+                                current += step;
+                                if (current >= target) {
+                                    stat.textContent = target;
+                                    clearInterval(timer);
+                                } else {
+                                    stat.textContent = Math.floor(current);
+                                }
+                            }, 16);
+                        });
+                        
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            if (statsSection) {
+                observer.observe(statsSection);
+            }
+        });
+    </script>
+</body>
+</html>AAA
